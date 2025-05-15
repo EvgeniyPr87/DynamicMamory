@@ -1,4 +1,4 @@
-#include "functions.h"
+п»ї#include "functions.h"
 #include"stdafx.h"
 
 void Print(const int* arr, const int& n)
@@ -202,7 +202,7 @@ int** insert_col(int** arr, const int& rows, int& cols, int index_cols)
 		}
 	}
 	Clear(arr, rows, cols);
-	////удаляем массив
+	////СѓРґР°Р»СЏРµРј РјР°СЃСЃРёРІ
 	//for (int i = 0; i < rows; i++) {
 	//	delete[]arr[i];
 	//}
@@ -401,10 +401,10 @@ int** erase_col(int** arr,  int& rows, int& cols, int index_col)
 }
 void Clear(int** arr, const int& rows, int& cols)
 {
-	//сначала удаляем строки
+	//СЃРЅР°С‡Р°Р»Р° СѓРґР°Р»СЏРµРј СЃС‚СЂРѕРєРё
 	for (int i = 0; i < rows; i++) {
 		delete[] arr[i];
 	}
-	//удаляем массив указателей
+	//СѓРґР°Р»СЏРµРј РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№
 	delete[]arr;
 }
