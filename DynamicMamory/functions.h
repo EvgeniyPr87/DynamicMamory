@@ -1,8 +1,24 @@
 #pragma once
 void Print(const int* arr,const int& n);
+void Print(int** arr, const int rows, const int cols);
+void FillRand(int** arr, const int rows, const int cols);
 int* push_front(int* arr, int& n, int a);
-int* insert(int* arr, int& n,const int& index,const int& a);
+int** push_row_front(int** arr, int& rows, const int& cols);
+int** push_col_front(int** arr, const int& rows, int& cols);//???
+int* push_back(int* arr, int& n);
+int** push_row_back(int** arr, int& rows, const int& cols);
+int** push_col_back(int** arr, const int& rows, int& cols);
+int* insert(int* arr, int& n,const int& index);
+int** insert_row(int** arr, int& rows, const int& cols,int index_rows);
+int** insert_col(int** arr, const int& rows, int& cols, int index_cols);
 int* pop_back(int* arr, int& n);
+int** pop_row_back(int** arr, int& rows, const int& cols);//где-то ошибка
+int** pop_col_back(int** arr, const int& rows, int& cols);
 int* pop_front(int* arr, int& n);
+int** pop_row_front(int** arr, int& rows, const int& cols);
+int** pop_col_front(int** arr, const int& rows, int& cols);
 int* erase(int* arr, int& n, const int& index);
-int* find(int* arr, int& n, const int& item);
+int** erase_row(int** arr, int& rows, const int& cols, int index_rows);//не работает
+int** erase_col(int** arr,  int& rows, int& cols,int index_col);
+void Allocate(int** arr, const int& rows, const int& cols);
+void Clear(int** arr,const int& rows, int& cols);
