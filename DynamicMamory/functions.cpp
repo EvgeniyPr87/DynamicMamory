@@ -1,13 +1,13 @@
 ﻿#include "functions.h"
 #include"stdafx.h"
 
-void Print(const int* arr, const int& n)
+template<typename T> void Print(const T* arr, const int& n)
 {
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << "\t";
 	}cout << endl;
 }
-void Print(int** arr, const int rows, const int cols)
+/*template<typename T>*/ void Print(int** arr, const int rows, const int cols)
 {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
@@ -16,7 +16,7 @@ void Print(int** arr, const int rows, const int cols)
 		cout << endl;
 	}
 }
-void FillRand(int** arr, const int rows, const int cols)
+/*template<typename T>*/ void FillRand(int** arr, const int rows, const int cols)
 {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
@@ -102,7 +102,7 @@ int* push_back(int* arr, int& n)
 	n++;
 	return buffer;
 }
-int** push_row_back(int** arr, int& rows, const int& cols)
+template<typename T> T** push_row_back(T** arr, int& rows, const int& cols)
 {
 	int** buffer = new int* [rows + 1];
 	if (buffer == nullptr) {
