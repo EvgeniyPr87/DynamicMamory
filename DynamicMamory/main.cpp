@@ -1,4 +1,4 @@
-#include"stdafx.h"
+п»ї#include"stdafx.h"
 #include"functions.h"
 
 void main() {
@@ -12,7 +12,7 @@ void main() {
 	}cout << endl;
 
 #ifdef PUSH_FRONT
-	cout << "Введите элемент: "; cin >> number;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚: "; cin >> number;
 	array = push_front(array, size, number);
 	Print(array, size);
 	/*for (int i = 0; i < size; i++) {
@@ -30,8 +30,8 @@ void main() {
 #ifdef INSERT
 	int pos;
 	//int num_2;
-	cout << "Введите позицию элемента /1... 10/: "; cin >> pos;
-	///cout << "Введите значение элемента: "; cin >> num_2;
+	cout << "Р’РІРµРґРёС‚Рµ РїРѕР·РёС†РёСЋ СЌР»РµРјРµРЅС‚Р° /1... 10/: "; cin >> pos;
+	///cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°: "; cin >> num_2;
 	array = insert(array, size, pos);
 	Print(array, size);
 
@@ -48,7 +48,7 @@ void main() {
 #endif // POP_FRONT
 #ifdef ERASE
 	int index;
-	cout << "Введите индех элемента: "; cin >> index;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµС… СЌР»РµРјРµРЅС‚Р°: "; cin >> index;
 	array = erase(array, size, index);
 	Print(array, size);
 
@@ -60,11 +60,11 @@ void main() {
 #ifdef DYNAMIC_MEMORY_2
 	int rows;
 	int cols;
-	cout << "Введите количество строк: "; cin >> rows;
-	cout << "Введите количество элементов строки: "; cin >> cols;
-	//создаем массив указателей 
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє: "; cin >> rows;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё: "; cin >> cols;
+	//СЃРѕР·РґР°РµРј РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ 
 	int** arr = new int* [rows];
-	//выделяем память под строки двумерного динамического массива
+	//РІС‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ СЃС‚СЂРѕРєРё РґРІСѓРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 	for (int i = 0; i < rows; i++) {
 		arr[i] = new int[cols];
 	}
@@ -85,7 +85,7 @@ void main() {
 
 #ifdef INSERT_ROW
 	
-	cout << "Введите позицию строки"; cin >> index_r;
+	cout << "Р’РІРµРґРёС‚Рµ РїРѕР·РёС†РёСЋ СЃС‚СЂРѕРєРё"; cin >> index_r;
 	arr = insert_row(arr, rows, cols, index_r);
 	Print(arr, rows, cols);
 #endif // INSERT_ROW
@@ -101,7 +101,7 @@ void main() {
 #endif // POP_ROW_BACK
 
 #ifdef ERASE_ROW
-	cout << "Введите позицию строки"; cin >> index_r;
+	cout << "Р’РІРµРґРёС‚Рµ РїРѕР·РёС†РёСЋ СЃС‚СЂРѕРєРё"; cin >> index_r;
 	arr = erase_row(arr, rows, cols, index_r);
 	Print(arr, rows, cols);
 #endif // ERASE_ROW
@@ -117,7 +117,7 @@ void main() {
 #endif // PUSH_COL_BACK
 
 #ifdef INSERT_COL
-	cout << "Введите позицию столбца "; cin >> index_r;
+	cout << "Р’РІРµРґРёС‚Рµ РїРѕР·РёС†РёСЋ СЃС‚РѕР»Р±С†Р° "; cin >> index_r;
 	arr = insert_col(arr, rows, cols, index_r);
 	Print(arr, rows, cols);
 #endif // INSERT_COL
@@ -133,7 +133,7 @@ void main() {
 #endif // POP_COL_FRONT
 
 #ifdef ERASE_COL
-	cout << "Введите позицию столбца "; cin >> index_r;
+	cout << "Р’РІРµРґРёС‚Рµ РїРѕР·РёС†РёСЋ СЃС‚РѕР»Р±С†Р° "; cin >> index_r;
 	arr = erase_col(arr, rows, cols, index_r);
 	Print(arr, rows, cols);
 #endif // ERASE_COL
