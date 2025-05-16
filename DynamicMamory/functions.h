@@ -1,9 +1,9 @@
 #pragma once
-template<typename T> void Print(const T* arr,const int& n);
-/*template<typename T>*/ void Print(int** arr, const int rows, const int cols);
-/*template<typename T>*/ void FillRand(int** arr, const int rows, const int cols);
+void Print(const int* arr,const int& n);
+void Print(int** arr, const int rows, const int cols);
+void FillRand(int** arr, const int rows, const int cols);
 int* push_front(int* arr, int& n, int a);
-int** push_row_front(int** arr, int& rows, const int& cols);
+template<typename T> T** push_row_front(T** arr, int& rows, const int& cols);
 int** push_col_front(int** arr, const int& rows, int& cols);
 int* push_back(int* arr, int& n);
 template<typename T > T** push_row_back(T** arr, int& rows, const int& cols);

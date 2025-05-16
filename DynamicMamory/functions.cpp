@@ -1,13 +1,13 @@
 ﻿#include "functions.h"
 #include"stdafx.h"
 
-template<typename T> void Print(const T* arr, const int& n)
+void Print(const int* arr, const int& n)
 {
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << "\t";
 	}cout << endl;
 }
-/*template<typename T>*/ void Print(int** arr, const int rows, const int cols)
+void Print(int** arr, const int rows, const int cols)
 {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
@@ -16,7 +16,7 @@ template<typename T> void Print(const T* arr, const int& n)
 		cout << endl;
 	}
 }
-/*template<typename T>*/ void FillRand(int** arr, const int rows, const int cols)
+void FillRand(int** arr, const int rows, const int cols)
 {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
@@ -51,9 +51,9 @@ int* push_front(int* arr, int& n,int a)
 	n++;
 	return buffer;
 }
-int** push_row_front(int** arr, int& rows, const int& cols)
+template <typename T> T** push_row_front(T** arr, int& rows, const int& cols)
 {
-	int** buffer = new int* [rows + 1];
+	T** buffer = new T* [rows + 1];
 
 	if (buffer == nullptr) {
 		cout << "! Erorr.Memory is not allocated !" << endl;
@@ -64,7 +64,7 @@ int** push_row_front(int** arr, int& rows, const int& cols)
 		buffer[i+1]=arr[i];
 	}
 	delete[]arr;
-	buffer[0] = new int[cols] {};
+	buffer[0] = new T[cols] {};
 	rows++;
 	return buffer;
 }
@@ -104,17 +104,16 @@ int* push_back(int* arr, int& n)
 }
 template<typename T> T** push_row_back(T** arr, int& rows, const int& cols)
 {
-	int** buffer = new int* [rows + 1];
+	T** buffer = new T* [rows + 1];
 	if (buffer == nullptr) {
 		cout << "! Erorr.Memory is not allocated !" << endl;
 		return nullptr;
 	}
-
 	for (int i = 0; i < rows; i++) {
 		buffer[i] = arr[i];
 	}
 	delete[]arr;
-	buffer[rows] = new int[cols] {};
+	buffer[rows] = new T[cols] {};
 	rows++;
 	return buffer;
 }
