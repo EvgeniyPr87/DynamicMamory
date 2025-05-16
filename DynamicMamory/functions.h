@@ -20,5 +20,5 @@ int** pop_col_front(int** arr, const int& rows, int& cols);
 int* erase(int* arr, int& n, const int& index);
 int** erase_row(int** arr, int& rows, const int& cols, int index_rows);
 int** erase_col(int** arr,  int& rows, int& cols,int index_col);
-void Allocate(int** arr, const int& rows, const int& cols);
 void Clear(int** arr,const int& rows, int& cols);
+void Allocate(int** arr, const int& rows, const int& cols);

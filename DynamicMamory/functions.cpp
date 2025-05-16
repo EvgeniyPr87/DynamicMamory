@@ -24,14 +24,6 @@ void FillRand(int** arr, const int rows, const int cols)
 		}
 	}
 }
-void Allocate(int**arr,const int& rows, const int& cols)
-{
-	arr = new int* [rows];
-	for (int i = 0; i < rows; i++) {
-		arr[i] = new int[cols];
-	}
-	
-}
 int* push_front(int* arr, int& n,int a)
 {
 	int* buffer = new int[n + 1];
@@ -407,4 +399,10 @@ void Clear(int** arr, const int& rows, int& cols)
 	}
 	//удаляем массив указателей
 	delete[]arr;
+}
+void Allocate(int**arr,const int& rows, const int& cols)
+{
+	for (int i = 0; i < rows; i++) {
+		arr[i] = new int[cols];
+	}
 }

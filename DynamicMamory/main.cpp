@@ -72,6 +72,16 @@ void main() {
 	FillRand(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << line << endl;
+
+// Вывод на экран массива при помощи арифметики указателей
+	for (int i = 0; i < rows; i++) {
+		int* p_rows =*(arr+i);
+		for (int j = 0; j < cols; j++) {
+			int item = *(p_rows +j);
+			cout << item << "\t";
+		}cout << endl;
+	}
+
 	int index_r;
 #ifdef PUSH_ROW_BACK
 	arr = push_row_back(arr, rows, cols);
