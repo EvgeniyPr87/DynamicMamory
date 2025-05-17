@@ -1,5 +1,6 @@
 ﻿#include"stdafx.h"
 #include"functions.h"
+#include"functions.cpp"
 
 void main() {
 	setlocale(LC_ALL, "");

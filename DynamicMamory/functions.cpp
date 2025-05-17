@@ -164,9 +164,9 @@ int* insert(int* arr, int& n, const int& index)
 	n++;
 	return buffer;
 }
-int** insert_row(int** arr, int& rows, const int& cols, int index_rows)
+template <typename T> T** insert_row(T** arr, int& rows, const int& cols, int index_rows)
 {
-	int** buffer = new int* [rows + 1];
+	T** buffer = new T* [rows + 1];
 
 	if (buffer == nullptr) {
 		cout << "! Erorr.Memory is not allocated !" << endl;
@@ -182,7 +182,7 @@ int** insert_row(int** arr, int& rows, const int& cols, int index_rows)
 	
 	delete[]arr;
 	rows++;
-	buffer[index_rows] = new int[cols] {};
+	buffer[index_rows] = new T [cols] {};
 	return buffer;
 }
 int** insert_col(int** arr, const int& rows, int& cols, int index_cols)

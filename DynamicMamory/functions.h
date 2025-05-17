@@ -9,7 +9,7 @@ int* push_back(int* arr, int& n);
 template<typename T > T** push_row_back(T** arr, int& rows, const int& cols);
 int** push_col_back(int** arr, const int& rows, int& cols);
 int* insert(int* arr, int& n,const int& index);
-int** insert_row(int** arr, int& rows, const int& cols,int index_rows);
+template <typename T> T** insert_row(T** arr, int& rows, const int& cols,int index_rows);
 int** insert_col(int** arr, const int& rows, int& cols, int index_cols);
 int* pop_back(int* arr, int& n);
 int** pop_row_back(int** arr, int& rows, const int& cols);
